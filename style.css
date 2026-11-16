@@ -224,10 +224,11 @@ button {
   align-items: center;
   transform: translate(-50%, -300%);
   transition: transform 0.8s ease-in-out;
+  top: 50%;
 }
 
 .thanks-component--show {
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -50%);
 }
 
 .thanks-component__result {

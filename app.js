@@ -22,9 +22,13 @@ if (
 
 numbers.addEventListener("click", (e) => {
   if (e.target.classList.contains("rating-component__number")) {
-    activeElement?.classList.remove("rating-component__number--active");
+    if (activeElement) {
+      activeElement.classList.remove("rating-component__number--active");
+      activeElement.ariaPressed = "false";
+    }
 
     e.target.classList.add("rating-component__number--active");
+    e.target.classList.ariaPressed = "true";
     activeElement = e.target;
 
     selectedNum = Number(e.target.dataset.id);
@@ -42,8 +46,11 @@ submitButton.addEventListener("click", () => {
   }
 
   ratingComponent.classList.add("rating-component--hide");
+  ratingComponent.ariaHidden = "true";
+
   thanksScore.textContent = selectedNum;
   setTimeout(() => {
     thanksComponent.classList.add("thanks-component--show");
+    thanksComponent.ariaHidden = "false";
   }, TRANSITION_DELAY);
 });

@@ -35,24 +35,11 @@
   </head>
   <body>
     <main>
-      <section class="thanks-component" id="thanks-component">
-        <img
-          src="./images/illustration-thank-you.svg"
-          alt="Illustration showing appreciation for feedback"
-        />
-        <span class="thanks-component__result" aria-live="polite">
-          You selected <span id="thanks-score"></span> out of 5
-        </span>
-        <div class="thanks-component__content">
-          <h2 class="thanks-component__title">Thank you!</h2>
-          <p>
-            We appreciate you taking the time to give a rating. If you ever need
-            more support, don’t hesitate to get in touch!
-          </p>
-        </div>
-      </section>
-
-      <section class="rating-component" id="rating-component">
+      <section
+        class="rating-component"
+        id="rating-component"
+        aria-hidden="false"
+      >
         <div class="rating-component__icon-container">
           <img
             class="rating-component__icon"
@@ -68,25 +55,76 @@
           </p>
           <ul class="rating-component__numbers" id="numbers">
             <li>
-              <button class="rating-component__number" data-id="1">1</button>
+              <button
+                class="rating-component__number"
+                aria-pressed="false"
+                data-id="1"
+              >
+                1
+              </button>
             </li>
             <li>
-              <button class="rating-component__number" data-id="2">2</button>
+              <button
+                class="rating-component__number"
+                aria-pressed="false"
+                data-id="2"
+              >
+                2
+              </button>
             </li>
             <li>
-              <button class="rating-component__number" data-id="3">3</button>
+              <button
+                class="rating-component__number"
+                aria-pressed="false"
+                data-id="3"
+              >
+                3
+              </button>
             </li>
             <li>
-              <button class="rating-component__number" data-id="4">4</button>
+              <button
+                class="rating-component__number"
+                aria-pressed="false"
+                data-id="4"
+              >
+                4
+              </button>
             </li>
             <li>
-              <button class="rating-component__number" data-id="5">5</button>
+              <button
+                class="rating-component__number"
+                aria-pressed="false"
+                data-id="5"
+              >
+                5
+              </button>
             </li>
           </ul>
         </div>
         <button class="rating-component__button" id="submit-button">
           Submit
         </button>
+      </section>
+
+      <section
+        class="thanks-component"
+        id="thanks-component"
+        aria-hidden="true"
+      >
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Illustration showing appreciation for feedback"
+        />
+        <span class="thanks-component__result" aria-live="polite">
+          You selected <span id="thanks-score"></span> out of 5
+        </span>
+        <div class="thanks-component__content">
+          <h2 class="thanks-component__title">Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </section>
     </main>
     <footer class="attribution">
