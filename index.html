@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <meta
+      name="description"
+      content="Interactive rating component built with HTML, CSS, and JavaScript. Users can select a rating and submit feedback through a responsive and accessible UI."
+    />
+    <meta
+      name="keywords"
+      content="interactive rating component, frontend mentor, HTML, CSS, JavaScript, responsive design, accessibility, UI component, feedback form"
+    />
+    <meta name="author" content="Ruben de Man" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="thanks-component" id="thanks-component">
+        <img
+          src="./images/illustration-thank-you.svg"
+          alt="Illustration showing appreciation for feedback"
+        />
+        <span class="thanks-component__result" aria-live="polite">
+          You selected <span id="thanks-score"></span> out of 5
+        </span>
+        <div class="thanks-component__content">
+          <h2 class="thanks-component__title">Thank you!</h2>
+          <p>
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+      </section>
+
+      <section class="rating-component" id="rating-component">
+        <div class="rating-component__icon-container">
+          <img
+            class="rating-component__icon"
+            src="./images/icon-star.svg"
+            alt="Star icon"
+          />
+        </div>
+        <div class="rating-component__content">
+          <h1 class="rating-component__title">How did we do?</h1>
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <ul class="rating-component__numbers" id="numbers">
+            <li>
+              <button class="rating-component__number" data-id="1">1</button>
+            </li>
+            <li>
+              <button class="rating-component__number" data-id="2">2</button>
+            </li>
+            <li>
+              <button class="rating-component__number" data-id="3">3</button>
+            </li>
+            <li>
+              <button class="rating-component__number" data-id="4">4</button>
+            </li>
+            <li>
+              <button class="rating-component__number" data-id="5">5</button>
+            </li>
+          </ul>
+        </div>
+        <button class="rating-component__button" id="submit-button">
+          Submit
+        </button>
+      </section>
+    </main>
+    <footer class="attribution">
+      <p class="attribution__text">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://rubendeman.nl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Ruben de Man</a
+        >.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
